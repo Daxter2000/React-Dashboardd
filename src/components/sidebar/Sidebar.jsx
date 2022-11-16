@@ -38,10 +38,10 @@ const Sidebar = () => {
                             </li>
                         </Link>
                         <p className="title">LIST</p>
-                        <Link to="/users" className="link">
+                        <Link to="/clients" className="link">
                             <li>
                                 <PeopleIcon  className="icon" />
-                                <span>Usuarios</span>
+                                <span>Clientes</span>
                             </li>
                         </Link>
                         <Link to="/products" className="link">
@@ -50,15 +50,18 @@ const Sidebar = () => {
                                 <span>Productos</span>
                             </li>
                         </Link>
-                       
-                        <li>
-                            <CreditCardIcon  className="icon" />
-                            <span>Ordenes</span>
-                        </li>
-                        <li>
-                            <LocalShippingIcon  className="icon" />
-                            <span>Entregas</span>
-                        </li>
+                        <Link to="/quotations" className="link">
+                            <li>
+                                <CreditCardIcon  className="icon" />
+                                <span>Cotizaciones</span>
+                            </li>
+                        </Link>
+                        <Link to="/projects" className="link">
+                            <li>
+                                <LocalShippingIcon  className="icon" />
+                                <span>Proyectos</span>
+                            </li>
+                        </Link>
                         <p className="title">USEFULL LINKS</p>
                         <li>
                             <InsertChartIcon  className="icon" />
