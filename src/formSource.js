@@ -74,3 +74,64 @@ export const userInputs = [
       placeholder: "in stock",
     },
   ];
+
+export const projectInputs = [
+    {
+      id: 1,
+      label: "Fase",
+      type: "text",
+      placeholder: "Fase",
+    },
+    {
+      id: 2,
+      label: "Avance",
+      type: "text",
+      placeholder: "Avance",
+    },
+    {
+      id: 3,
+      label: "Fecha de inicio",
+      type: "date",
+      placeholder: "Fecha de inicio",
+    },
+    {
+      id: 4,
+      label: "Fecha de finalizacion",
+      type: "date",
+      placeholder: "Fecha de finalizacion",
+    },
+    {
+      id: 5,
+      label: "Empleado encargado",
+      type: "text",
+      placeholder: "Empleado encargado",
+    },
+  ];
+
+export const quotationInputs = [
+    {
+      id: 1,
+      label: "Fecha",
+      type: "date",
+      placeholder: "Fecha",
+    },
+    {
+      id: 5,
+      label: "Hora",
+      type: "time",
+      placeholder: "Hora",
+    },
+    {
+      id: 2,
+      label: "Empleado",
+      type: "number",
+      placeholder: "Numero",
+    },
+    {
+      id: 5,
+      label: "Cliente",
+      type: "text",
+      placeholder: "Cliente",
+    },
+
+  ];

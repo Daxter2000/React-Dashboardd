@@ -65,7 +65,7 @@ const Sidebar = () => {
                         <p className="title">USEFULL LINKS</p>
                         <li>
                             <InsertChartIcon  className="icon" />
-                            <span>Estadisticas</span>
+                            <span>Inventario</span>
                         </li>
                         <li>
                             <NotificationsActiveIcon className="icon" />

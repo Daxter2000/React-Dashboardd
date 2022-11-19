@@ -223,4 +223,129 @@ export const productRows =
         { "id": 22, "name": "residencial", "description": "Drilled Shafts", "model": "7822434756", "unit price": 79, "unit": "M2", "status": "active" },
         { "id": 23, "name": "residencial", "description": "Exterior Signage", "model": "1680732013", "unit price": 63, "unit": "Unidad", "status": "passive" },
         { "id": 24, "name": "herreria", "description": "Electrical", "model": "5499946019", "unit price": 70, "unit": "Unidad", "status": "passive" },
-        { "id": 25, "name": "closet", "description": "Framing (Steel)", "model": "6219478592", "unit price": 43, "unit": "FtL", "status": "active" }]
+        { "id": 25, "name": "closet", "description": "Framing (Steel)", "model": "6219478592", "unit price": 43, "unit": "FtL", "status": "active" }
+    ];
+
+
+export const projectColumns =
+    [
+        { field: 'id', headerName: 'ID', width: 70 },
+        { field: 'advance', headerName: 'Fase', width: 80 },
+        {
+            field: 'percentage', headerName: 'Porcentaje', width: 100,
+            renderCell: (params) => {
+                return (
+                    <div >
+                        {params.row.percentage} %
+                    </div>
+                )
+            }
+        },
+        { field: 'start', headerName: 'Fecha Inicio', width: 120, },
+        { field: 'finish', headerName: 'Fecha de termino', width: 150 },
+        { field: 'quotation', headerName: 'Costo de cotizacion', width: 150 },
+
+        {
+            field: 'status', headerName: 'Estado', width: 130,
+            renderCell: (params) => {
+                return (
+                    <div className={`cellWithStatus ${params.row.status}`} >
+                        {params.row.status}
+                    </div>
+                )
+            }
+        },
+        {
+            field: "action", headerName: "Action", width: 200,
+            renderCell: (params) => {
+                return (
+                    <div className="cellAction">
+                        <Link to="/projects/test" style={{ textDecoration: "none" }}>
+                            <div className="viewButton">View</div>
+                        </Link>
+                    </div>
+                );
+            },
+        }
+    ];
+
+export const projectsRows =
+    [
+        { "id": 1, "advance": 13, "percentage": 0.33, "start": "13/10/2022", "finish": "08/09/2022", "quotation": "$36.30", "status": "active" },
+        { "id": 2, "advance": 21, "percentage": 0.76, "start": "23/07/2022", "finish": "02/05/2022", "quotation": "$666.00", "status": "passive" },
+        { "id": 3, "advance": 57, "percentage": 40.7, "start": "20/06/2022", "finish": "05/12/2021", "quotation": "$383.41", "status": "passive" },
+        { "id": 4, "advance": 100, "percentage": 60.9, "start": "26/07/2022", "finish": "12/11/2021", "quotation": "$253.98", "status": "passive" },
+        { "id": 5, "advance": 16, "percentage": 0.17, "start": "16/12/2021", "finish": "10/12/2021", "quotation": "$393.98", "status": "pending" },
+        { "id": 6, "advance": 48, "percentage": 0.7, "start": "23/09/2022", "finish": "06/04/2022", "quotation": "$817.39", "status": "active" },
+        { "id": 7, "advance": 10, "percentage": 0.51, "start": "11/07/2022", "finish": "23/08/2022", "quotation": "$87.71", "status": "active" },
+        { "id": 8, "advance": 99, "percentage": 0.99, "start": "12/09/2022", "finish": "05/04/2022", "quotation": "$201.31", "status": "pending" },
+        { "id": 9, "advance": 74, "percentage": 0.84, "start": "23/02/2022", "finish": "29/12/2021", "quotation": "$871.83", "status": "active" },
+        { "id": 10, "advance": 18, "percentage": 20.9, "start": "30/08/2022", "finish": "26/03/2022", "quotation": "$826.82", "status": "pending" },
+        { "id": 11, "advance": 93, "percentage": 0.32, "start": "22/06/2022", "finish": "09/01/2022", "quotation": "$534.25", "status": "active" },
+        { "id": 12, "advance": 10, "percentage": 0.35, "start": "11/07/2022", "finish": "03/03/2022", "quotation": "$828.11", "status": "pending" },
+        { "id": 13, "advance": 18, "percentage": 0.66, "start": "29/10/2022", "finish": "27/06/2022", "quotation": "$533.19", "status": "pending" },
+        { "id": 14, "advance": 98, "percentage": 0.7, "start": "22/11/2021", "finish": "20/04/2022", "quotation": "$739.14", "status": "pending" },
+        { "id": 15, "advance": 1, "percentage": 0.3, "start": "03/11/2021", "finish": "19/06/2022", "quotation": "$558.01", "status": "passive" },
+        { "id": 16, "advance": 19, "percentage": 0.23, "start": "28/05/2022", "finish": "05/05/2022", "quotation": "$668.94", "status": "passive" },
+        { "id": 17, "advance": 21, "percentage": 0.6, "start": "19/03/2022", "finish": "15/08/2022", "quotation": "$997.82", "status": "passive" },
+        { "id": 18, "advance": 32, "percentage": 0.86, "start": "15/08/2022", "finish": "05/03/2022", "quotation": "$90.94", "status": "pending" },
+        { "id": 19, "advance": 84, "percentage": 0.69, "start": "06/01/2022", "finish": "27/04/2022", "quotation": "$791.69", "status": "pending" },
+        { "id": 20, "advance": 80, "percentage": 0.7, "start": "28/06/2022", "finish": "29/09/2022", "quotation": "$890.79", "status": "passive" }
+    ];
+
+export const quotationColumns =
+    [
+        { field: 'id', headerName: 'ID', width: 70 },
+        { field: 'quotation_date', headerName: 'Fecha de cotizacion', width: 80 },
+        { field: 'time', headerName: 'Hora de cotizacion', width: 150 },
+        { field: 'address', headerName: 'Direccion', width: 120, },
+        { field: 'client', headerName: 'Cliente', width: 150 },
+        { field: 'seller', headerName: 'Vendedor', width: 150 },
+
+        {
+            field: 'status', headerName: 'Estado', width: 130,
+            renderCell: (params) => {
+                return (
+                    <div className={`cellWithStatus ${params.row.status}`} >
+                        {params.row.status}
+                    </div>
+                )
+            }
+        },
+        {
+            field: "action", headerName: "Action", width: 200,
+            renderCell: (params) => {
+                return (
+                    <div className="cellAction">
+                        <Link to="/quotations/test" style={{ textDecoration: "none" }}>
+                            <div className="viewButton">View</div>
+                        </Link>
+                    </div>
+                );
+            },
+        }
+    ];
+
+export const quotationsRows =
+    [
+        { "id": 1, "quotation_date": "06/02/2022", "time": "1:57 AM", "address": "9 Bunting Lane", "client": "Lucila Kilpin", "seller": "Dolly Duxbury", "status": "pending" },
+        { "id": 2, "quotation_date": "18/02/2022", "time": "12:39 PM", "address": "3 Cottonwood Crossing", "client": "Massimiliano Bain", "seller": "Raff Swayte", "status": "passive" },
+        { "id": 3, "quotation_date": "27/08/2022", "time": "12:10 AM", "address": "951 Hintze Junction", "client": "Redford Trillo", "seller": "Ingeborg Truckell", "status": "active" },
+        { "id": 4, "quotation_date": "26/02/2022", "time": "12:59 AM", "address": "995 Carioca Plaza", "client": "Onofredo Walter", "seller": "Garland Corby", "status": "passive" },
+        { "id": 5, "quotation_date": "26/11/2021", "time": "3:58 PM", "address": "783 Vidon Point", "client": "Katherine Walder", "seller": "Fayre Issitt", "status": "passive" },
+        { "id": 6, "quotation_date": "31/12/2021", "time": "4:31 AM", "address": "18074 Shelley Trail", "client": "Verina Barke", "seller": "Karilynn Chipp", "status": "pending" },
+        { "id": 7, "quotation_date": "10/11/2022", "time": "11:07 PM", "address": "24488 Nevada Court", "client": "Carlye Obee", "seller": "Joyan Skeeles", "status": "active" },
+        { "id": 8, "quotation_date": "13/01/2022", "time": "7:08 AM", "address": "86810 Morningstar Parkway", "client": "Dniren Lampens", "seller": "Kenton Fosdike", "status": "passive" },
+        { "id": 9, "quotation_date": "05/08/2022", "time": "2:49 PM", "address": "7 Huxley Court", "client": "Suellen Rambadt", "seller": "Winona Duffie", "status": "active" },
+        { "id": 10, "quotation_date": "24/09/2022", "time": "10:37 PM", "address": "7024 Hagan Road", "client": "Cirilo Lackmann", "seller": "Carleton Kardos-Stowe", "status": "passive" },
+        { "id": 11, "quotation_date": "22/04/2022", "time": "10:01 PM", "address": "6 Elgar Trail", "client": "Florry Dally", "seller": "Maynard Joddins", "status": "pending" },
+        { "id": 12, "quotation_date": "23/12/2021", "time": "12:42 AM", "address": "09783 Cherokee Street", "client": "Mariejeanne Victoria", "seller": "Stacy Piotrkowski", "status": "passive" },
+        { "id": 13, "quotation_date": "24/07/2022", "time": "8:52 PM", "address": "7155 Drewry Street", "client": "Montgomery Swanston", "seller": "Leora Baskwell", "status": "passive" },
+        { "id": 14, "quotation_date": "20/08/2022", "time": "11:31 AM", "address": "4 Messerschmidt Drive", "client": "Sibley Lammas", "seller": "Margalit Chilton", "status": "pending" },
+        { "id": 15, "quotation_date": "28/07/2022", "time": "1:24 AM", "address": "59534 Parkside Circle", "client": "Hobey Leworthy", "seller": "Marijo Enrrico", "status": "pending" },
+        { "id": 16, "quotation_date": "21/08/2022", "time": "4:16 AM", "address": "3 Doe Crossing Hill", "client": "Hurley Spavins", "seller": "Jena Wyatt", "status": "pending" },
+        { "id": 17, "quotation_date": "10/12/2021", "time": "7:46 PM", "address": "2 Scott Circle", "client": "Hetti Leggin", "seller": "Stephani Dudbridge", "status": "pending" },
+        { "id": 18, "quotation_date": "08/06/2022", "time": "8:46 AM", "address": "9573 American Ash Circle", "client": "Modesty Lightoller", "seller": "Batholomew Sevitt", "status": "active" },
+        { "id": 19, "quotation_date": "15/01/2022", "time": "10:20 PM", "address": "08842 Northview Hill", "client": "Maye Wannes", "seller": "Sayre Caustick", "status": "active" },
+        { "id": 20, "quotation_date": "03/02/2022", "time": "10:35 AM", "address": "547 Jana Court", "client": "Lauri Fraczak", "seller": "Brenna Cubin", "status": "pending" }
+    ];

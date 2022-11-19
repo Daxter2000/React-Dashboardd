@@ -1,3 +1,10 @@
 .login{
-    background-color: yellow;
+    display: flex;
+    width: 100%;
+    background-color: orange;
+
+    .form_login_container{
+        justify-content: space-around;
+    width: 100%;    }
+    
 }
